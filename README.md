@@ -11,12 +11,19 @@ Sigmundneyson, um cara que está devendo a todas as pessoas possíveis na cidade
 Você pode andar nas 8 direções, mas o personagem está sempre correndo em alguma direção, e tem um botão de pulo também. O objetivo é encostar nas pessoas que estão usando celular, crianças jogando bola, meninas brincando com uma boneca, etc, etc, enquanto desvia de buracos, cones, carros em movimento, policiais e os capangas da máfia. 
 No final de cada estágio você tem acesso a uma loja, onde você vende as coisas que conseguiu roubar. Ah, e a cada assalto a vítima começa a correr pro policial mais perto pra ele correr atrás de você.
 
-# Metas
-[Resources]
- L[Gráficos / Sprites]: 0%
- L[Sons / Músicas]: 0%
-[Features]
-  L[Movimentação e controle]
-  L[Obstáculos]
-  L[Loja in-game]
-  L[Interface]
+# Resources
+Gráficos / Sprites: 0%
+
+Sons / Músicas: 0%
+ 
+# Features
+Personagem principal: 0%
+
+Controle do jogo: 0%
+
+Obstáculos e NPCs: 0%
+
+Loja in-game: 0%
+
+Interface: 0%
+
