@@ -5,14 +5,28 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprites name="Player">
+      <sprite>sprites\sPlayerLeft</sprite>
+      <sprite>sprites\sPlayerRight</sprite>
+      <sprite>sprites\sPlayerUp</sprite>
+      <sprite>sprites\sPlayerDown</sprite>
+      <sprite>sprites\sPlayerDownLeft</sprite>
+      <sprite>sprites\sPlayerDownRight</sprite>
+      <sprite>sprites\sPlayerUpLeft</sprite>
+      <sprite>sprites\sPlayerUpRight</sprite>
+    </sprites>
+    <sprite>sprites\sSolid</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\player</object>
+    <object>objects\oGC</object>
+    <object>objects\oPlayer</object>
+    <object>objects\oSolid</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\city</room>
+    <room>rooms\rmTest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
