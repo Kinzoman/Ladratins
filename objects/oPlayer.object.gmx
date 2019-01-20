@@ -323,53 +323,6 @@ if knockback = 2
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Debug
-if oGC.toggleInfo = 1{
-draw_set_color(c_white)
-draw_text(8,8,
-"X: " + string(x)+
-"#Y: " + string(y)+
-"#xsp (original): " + string(xspValue)+
-"#ysp (original): " + string(yspValue)+
-"#xspFloat: " + string(xspFloat)+
-"#yspFloat: " + string(yspFloat)+
-"#xspPoint: " + string(xspPoint)+
-"#yspPoint: " + string(yspPoint)+
-"#xspFinal: " + string(xsp)+
-"#yspFinal: " + string(ysp)+
-"#xDir: " + string(xDir)+
-"#yDir: " + string(yDir)+
-"#reverse: " + string(reverse)+
-"#knockback: " + string(knockback)+
-"#canMove: " + string(canMove)+
-"#Current frame: " + string(image_index)+
-"#Cycling speed: "+string(image_speed)+
-"#yScale: " + string(yScale)+
-"#Alarm[0]: " + string(alarm[0])+
-"#Alarm[1]: " + string(alarm[1]))
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>

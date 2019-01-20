@@ -7,25 +7,51 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Player">
-      <sprite>sprites\sPlayerLeft</sprite>
-      <sprite>sprites\sPlayerRight</sprite>
-      <sprite>sprites\sPlayerUp</sprite>
-      <sprite>sprites\sPlayerDown</sprite>
-      <sprite>sprites\sPlayerDownLeft</sprite>
-      <sprite>sprites\sPlayerDownRight</sprite>
-      <sprite>sprites\sPlayerUpLeft</sprite>
-      <sprite>sprites\sPlayerUpRight</sprite>
+      <sprites name="Idle/Walk">
+        <sprite>sprites\sPlayerLeft</sprite>
+        <sprite>sprites\sPlayerRight</sprite>
+        <sprite>sprites\sPlayerUp</sprite>
+        <sprite>sprites\sPlayerDown</sprite>
+        <sprite>sprites\sPlayerDownLeft</sprite>
+        <sprite>sprites\sPlayerDownRight</sprite>
+        <sprite>sprites\sPlayerUpLeft</sprite>
+        <sprite>sprites\sPlayerUpRight</sprite>
+      </sprites>
+      <sprites name="Jump">
+        <sprite>sprites\sPlayerJumpLeft</sprite>
+        <sprite>sprites\sPlayerJumpRight</sprite>
+        <sprite>sprites\sPlayerJumpUp</sprite>
+        <sprite>sprites\sPlayerJumpDown</sprite>
+        <sprite>sprites\sPlayerJumpDownLeft</sprite>
+        <sprite>sprites\sPlayerJumpDownRight</sprite>
+        <sprite>sprites\sPlayerJumpUpLeft</sprite>
+        <sprite>sprites\sPlayerJumpUpRight</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="NPCs">
+      <sprite>sprites\sNPC_CopLeft</sprite>
+      <sprite>sprites\sNPC_CopRight</sprite>
+      <sprite>sprites\sNPC_CopUp</sprite>
+      <sprite>sprites\sNPC_CopDown</sprite>
     </sprites>
     <sprite>sprites\sSolid</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\tlOnett</background>
+    <background>background\bgIntro</background>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\room_goto_next_time.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\oGC</object>
     <object>objects\oPlayer</object>
     <object>objects\oSolid</object>
+    <object>objects\oGoto</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmBoot</room>
     <room>rooms\rmTest</room>
   </rooms>
   <help>

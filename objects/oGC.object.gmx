@@ -25,7 +25,36 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>toggleInfo = 1
+            <string>///Initialize Variables
+//Debug
+toggleInfo = 1
+
+//Room Transitions
+roomNext = -1
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Go to specific room
+room_goto(roomNext);
 </string>
           </argument>
         </arguments>
@@ -63,7 +92,6 @@ keyPause=keyboard_check_pressed(vk_escape)
 
 noKey=keyboard_check(vk_nokey)
 
-oSolid.visible = toggleInfo
 </string>
           </argument>
         </arguments>
@@ -88,6 +116,84 @@ oSolid.visible = toggleInfo
 //Debug mode
 if (keyToggle)
 {toggleInfo = !toggleInfo}
+if instance_exists(oSolid) 
+{oSolid.visible = toggleInfo}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Room Behavior
+if room = rmBoot
+{roomNext = rmTest; 
+if alarm[0]&lt;0{alarm[0]=300;}}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Debug
+if toggleInfo = 1{
+draw_set_color(c_white)
+if instance_exists(oPlayer)
+{
+draw_text(8,8,
+"X: " + string(oPlayer.x)+
+"#Y: " + string(oPlayer.y)+
+"#xsp (original): " + string(oPlayer.xspValue)+
+"#ysp (original): " + string(oPlayer.yspValue)+
+"#xspFloat: " + string(oPlayer.xspFloat)+
+"#yspFloat: " + string(oPlayer.yspFloat)+
+"#xspPoint: " + string(oPlayer.xspPoint)+
+"#yspPoint: " + string(oPlayer.yspPoint)+
+"#xspFinal: " + string(oPlayer.xsp)+
+"#yspFinal: " + string(oPlayer.ysp)+
+"#xDir: " + string(oPlayer.xDir)+
+"#yDir: " + string(oPlayer.yDir)+
+"#reverse: " + string(oPlayer.reverse)+
+"#knockback: " + string(oPlayer.knockback)+
+"#canMove: " + string(oPlayer.canMove)+
+"#Current frame: " + string(oPlayer.image_index)+
+"#Cycling speed: "+string(oPlayer.image_speed)+
+"#yScale: " + string(oPlayer.yScale)+
+"#Alarm[0]: " + string(oPlayer.alarm[0])+
+"#Alarm[1]: " + string(oPlayer.alarm[1])+
+"#Alarm[0] - oGC: " + string (alarm[0])
+)
+}
+}
 </string>
           </argument>
         </arguments>

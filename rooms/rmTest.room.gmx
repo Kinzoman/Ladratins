@@ -3,15 +3,15 @@
   <caption></caption>
   <width>640</width>
   <height>480</height>
-  <vsnap>16</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
-  <colour>12632256</colour>
+  <colour>16281735</colour>
   <showcolour>-1</showcolour>
   <code></code>
-  <enableViews>0</enableViews>
+  <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="oPlayer" xview="0" yview="0" wview="484" hview="320" xport="0" yport="0" wport="968" hport="640" hborder="242" vborder="160" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -52,7 +52,6 @@
   </views>
   <instances>
     <instance objName="oPlayer" x="96" y="64" name="inst_086419CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oGC" x="0" y="0" name="inst_33A9DC97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolid" x="0" y="16" name="inst_0C6B33B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolid" x="0" y="32" name="inst_E757A4E8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolid" x="0" y="48" name="inst_0207AEBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -233,7 +232,41 @@
     <instance objName="oSolid" x="16" y="0" name="inst_F5160C12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSolid" x="16" y="16" name="inst_F19B809B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
-  <tiles/>
+  <tiles>
+    <tile bgName="tlOnett" x="64" y="288" w="32" h="32" xo="171" yo="600" id="10000435" name="inst_A2C233AC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="96" y="256" w="32" h="32" xo="171" yo="600" id="10000436" name="inst_873AEF9C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="128" y="224" w="32" h="32" xo="171" yo="600" id="10000437" name="inst_CE205E04" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="160" y="192" w="32" h="32" xo="171" yo="600" id="10000438" name="inst_BAD2AD5A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="64" y="256" w="32" h="32" xo="138" yo="600" id="10000439" name="inst_6E2DF38D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="96" y="224" w="32" h="32" xo="138" yo="600" id="10000440" name="inst_1173E613" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="128" y="192" w="32" h="32" xo="138" yo="600" id="10000441" name="inst_41226241" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="96" y="288" w="32" h="32" xo="204" yo="600" id="10000442" name="inst_1EB5A9B2" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="128" y="256" w="32" h="32" xo="204" yo="600" id="10000443" name="inst_E91019D5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="160" y="224" w="32" h="32" xo="204" yo="600" id="10000444" name="inst_9E563FDF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="192" y="192" w="32" h="32" xo="204" yo="600" id="10000445" name="inst_6033C865" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="128" y="288" w="32" h="32" xo="237" yo="600" id="10000446" name="inst_86063258" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="160" y="256" w="32" h="32" xo="237" yo="600" id="10000447" name="inst_7A4D9C20" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="192" y="224" w="32" h="32" xo="237" yo="600" id="10000448" name="inst_B0D377D3" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="224" y="224" w="32" h="32" xo="270" yo="600" id="10000450" name="inst_EE782BF7" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="192" y="256" w="32" h="32" xo="270" yo="600" id="10000451" name="inst_56637FD1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="160" y="288" w="32" h="32" xo="270" yo="600" id="10000452" name="inst_9F1821B2" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="224" y="192" w="32" h="32" xo="237" yo="600" id="10000453" name="inst_EB355F2A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="256" y="160" w="32" h="32" xo="237" yo="600" id="10000456" name="inst_C9201853" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="288" y="128" w="32" h="32" xo="237" yo="600" id="10000457" name="inst_99BA3D78" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="320" y="96" w="32" h="32" xo="237" yo="600" id="10000458" name="inst_D9B314ED" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="256" y="192" w="32" h="32" xo="270" yo="600" id="10000459" name="inst_AC502334" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="288" y="160" w="32" h="32" xo="270" yo="600" id="10000460" name="inst_99FAF7FB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="320" y="128" w="32" h="32" xo="270" yo="600" id="10000461" name="inst_F3E902D2" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="224" y="160" w="32" h="32" xo="204" yo="600" id="10000462" name="inst_B44E39CD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="256" y="128" w="32" h="32" xo="204" yo="600" id="10000463" name="inst_E7244A83" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="288" y="96" w="32" h="32" xo="204" yo="600" id="10000464" name="inst_DC4312FA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="192" y="160" w="32" h="32" xo="171" yo="600" id="10000465" name="inst_2FE51CE9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="224" y="128" w="32" h="32" xo="171" yo="600" id="10000466" name="inst_47B7B6B7" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="256" y="96" w="32" h="32" xo="171" yo="600" id="10000467" name="inst_C7020DA5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="160" y="160" w="32" h="32" xo="138" yo="600" id="10000470" name="inst_A345F093" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="192" y="128" w="32" h="32" xo="138" yo="600" id="10000471" name="inst_A1EBD24D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tlOnett" x="224" y="96" w="32" h="32" xo="138" yo="600" id="10000472" name="inst_1AA3981B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+  </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
   <PhysicsWorldLeft>0</PhysicsWorldLeft>
