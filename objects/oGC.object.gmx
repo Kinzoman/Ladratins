@@ -31,6 +31,8 @@ toggleInfo = 1
 
 //Room Transitions
 roomNext = -1
+
+room_speed=30
 </string>
           </argument>
         </arguments>
@@ -141,7 +143,7 @@ if instance_exists(oSolid)
             <string>///Room Behavior
 if room = rmBoot
 {roomNext = rmTest; 
-if alarm[0]&lt;0{alarm[0]=300;}}
+if alarm[0]&lt;0{alarm[0]=2*room_speed;}}
 </string>
           </argument>
         </arguments>

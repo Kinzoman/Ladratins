@@ -240,58 +240,82 @@ if knockback = 0
 xspPoint = 0; //The wanted horizontal speed for this step
 yspPoint = 0; //The wanted vertical speed for this step
 
-if canMove = 1
-{
-    if (oGC.keyLeft){xDir =-1; yDir = 0;} 
-    if (oGC.keyRight){xDir = 1; yDir = 0;} 
-    if (oGC.keyUp){xDir = 0; yDir =-1; }
-    if (oGC.keyDown){xDir = 0; yDir = 1;} 
-    if (oGC.keyLeft) &amp;&amp; (oGC.keyUp){xDir =-1; yDir =-1;} 
-    if (oGC.keyRight) &amp;&amp; (oGC.keyUp){xDir =1; yDir =-1;}
-    if (oGC.keyLeft) &amp;&amp; (oGC.keyDown){xDir =-1; yDir =1;} 
-    if (oGC.keyRight) &amp;&amp; (oGC.keyDown){xDir =1; yDir =1;}
-    if (oGC.noKey) {xDir = 0; yDir = 0;}
+if canMove = 1 {
+    if (oGC.keyLeft) {
+        xDir = -1;
+        yDir = 0;
+    }
+    else if (oGC.keyRight) {
+        xDir = 1;
+        yDir = 0;
+    }
+    else if (oGC.keyUp) {
+        xDir = 0;
+        yDir = -1;
+    }
+    else if (oGC.keyDown) {
+        xDir = 0;
+        yDir = 1;
+    }
+    if (oGC.keyLeft) &amp;&amp; (oGC.keyUp) {
+        xDir = -1;
+        yDir = -1;
+    }
+    if (oGC.keyRight) &amp;&amp; (oGC.keyUp) {
+        xDir = 1;
+        yDir = -1;
+    }
+    if (oGC.keyLeft) &amp;&amp; (oGC.keyDown) {
+        xDir = -1;
+        yDir = 1;
+    }
+    if (oGC.keyRight) &amp;&amp; (oGC.keyDown) {
+        xDir = 1;
+        yDir = 1;
+    }
+    if (oGC.noKey) {
+        xDir = 0;
+        yDir = 0;
+    }
 }
-if (!reverse)
-{
-    xspPoint += (xspValue*sign(xDir))
-    yspPoint += (yspValue*sign(yDir))
+if (!reverse) {
+    xspPoint += (xspValue * sign(xDir))
+    yspPoint += (yspValue * sign(yDir))
 }
 
-if (reverse)
-{
-    xspPoint -= (4*sign(xDir))
-    yspPoint -= (4*sign(yDir))
+if (reverse) {
+    xspPoint -= (4 * sign(xDir))
+    yspPoint -= (4 * sign(yDir))
 }
 
 //Horizontal collision
 xspFloat += (xspPoint - xspFloat) * 0.1; //Smoothly accelerate / decelerate to the wanted speed.
 xsp = round(xspFloat); //Turn the theoretical value into an integer for collision and movement
 var objCol = oSolid
-if(place_meeting(x + xsp, y, objCol))
-{
-    while(!place_meeting(x + sign(xsp), y, objCol))
-    {
+if (place_meeting(x + xsp, y, objCol)) {
+    while (!place_meeting(x + sign(xsp), y, objCol)) {
         x += sign(xsp)
     }
-    if knockback = 0    {knockback = 1}
-    xsp      = 0;
+    if knockback = 0 {
+        knockback = 1
+    }
+    xsp = 0;
     xspFloat = 0; //We still have to set the theoretical value to 0 here
 }
- 
+
 x += xsp;
 
 //Vertical collision
 yspFloat += (yspPoint - yspFloat) * 0.1; //Smoothly accelerate / decelerate to the wanted speed.
 ysp = round(yspFloat); //Turn the theoretical value into an integer for collision and movement
-if(place_meeting(x, y + ysp, objCol))
-{
-    while(!place_meeting(x, y+ sign(ysp), objCol))
-    {
-        y += sign(ysp)        
+if (place_meeting(x, y + ysp, objCol)) {
+    while (!place_meeting(x, y + sign(ysp), objCol)) {
+        y += sign(ysp)
     }
-    if knockback = 0    {knockback = 1}
-    ysp      = 0;
+    if knockback = 0 {
+        knockback = 1
+    }
+    ysp = 0;
     yspFloat = 0; //We still have to set the theoretical value to 0 here
 }
 y += ysp;
@@ -299,25 +323,27 @@ y += ysp;
 
 
 ///Change direction
-var moving = (point_distance(0,0,sign(xspPoint),sign(yspPoint)) &gt; 0);
-if (moving) &amp;&amp; (!reverse) 
-{
-    previousAngle = point_direction(0,0,sign(xspPoint),sign(yspPoint));
+var moving = (point_distance(0, 0, sign(xspPoint), sign(yspPoint)) &gt; 0);
+if (moving) &amp;&amp; (!reverse) {
+    previousAngle = point_direction(0, 0, sign(xspPoint), sign(yspPoint));
 }
 
 //Knockback
-if knockback = 1 
-{
-    if alarm[0]&lt;0{alarm[0]=knockbackDelay;} 
-    reverse = 1; canMove = 0;
+if knockback = 1 {
+    if alarm[0] &lt; 0 {
+        alarm[0] = knockbackDelay;
+    }
+    reverse = 1;
+    canMove = 0;
 }
 
-if knockback = 2 
-{
-    if alarm[0]&lt;0{alarm[0]=knockbackDelay;} 
-    reverse = 1; canMove = 0;
+if knockback = 2 {
+    if alarm[0] &lt; 0 {
+        alarm[0] = knockbackDelay;
+    }
+    reverse = 1;
+    canMove = 0;
 }
-
 </string>
           </argument>
         </arguments>

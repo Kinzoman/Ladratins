@@ -43,12 +43,15 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\room_goto_next_time.gml</script>
+    <script>scripts\movement.gml</script>
+    <script>scripts\movement_1.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oGC</object>
     <object>objects\oPlayer</object>
     <object>objects\oSolid</object>
     <object>objects\oGoto</object>
+    <object>objects\oNpc</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmBoot</room>
