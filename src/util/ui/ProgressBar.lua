@@ -7,14 +7,16 @@ function ProgressBar:new(x, y, width, height, color, limit, startValue)
     assert(width and height, "Progress Bar must needs dimensions size")
     local this = {
         x = x or 0, y = y or 0, width = width, height = height, color = color or {1, 1, 1},
-        limit = limit, value = startValue or 0, image = nil, quad = nil
+        limit = limit, value = startValue or 0, image = nil, quad = nil, imageOffset = {}
     }
 
     return setmetatable(this, ProgressBar)
 end
 
-function ProgressBar:addImage(image, quad)
+function ProgressBar:addImage(image, quad, xOffset, yOffset)
     self.image, self.quad = image, quad
+    self.imageOffset.x = xOffset
+    self.imageOffset.y = yOffset
 end
 
 function ProgressBar:increment(incrementalUnit)
@@ -51,7 +53,7 @@ function ProgressBar:draw()
         if self.quad then
             love.graphics.draw(self.image, self.quad, self.x, self.y, 0)
         else
-            love.graphics.draw(self.image, self.x, self.y)
+            love.graphics.draw(self.image, self.x, self.y, 0, 0.5, 0.5, self.imageOffset.x, self.imageOffset.y)
         end
     end
 end

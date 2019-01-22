@@ -5,15 +5,20 @@ InGameScene.__index = InGameScene
 function InGameScene:new(world)
     local this = {
         player = gameDirector:getLibrary("Player"):new(world.world, 60, 50),
+        playerLife = 15,
         map = love.graphics.newImage("assets/sprites/game_map.png"),
         music = love.audio.newSource("assets/sounds/in_game.wav", "static"),
+        hud = gameDirector:getLibrary("HeadUpDisplay"):new(15),
         cameraController = nil,
-        walls = {}
+        walls = {},
+        npcs = {},
+        elapsedTime = 0,
+        waitTime = love.math.random(2, 7)
     }
     this.music:setLooping(true)
     this.cameraController = gameDirector:getLibrary("CameraController"):new(this.player, {w = 2400, h = 1800}, 2)
     sceneDirector:addSubscene("pause", require "scenes.subscenes.PauseGame":new())
-    --[[Adding walls to game--]]
+    --[[Adding walls to game --]]
     table.insert(this.walls, gameDirector:getLibrary("Wall"):new(world.world, 1200, 0, {w = 2400, h = 10}))
     table.insert(this.walls, gameDirector:getLibrary("Wall"):new(world.world, 1200, 1800, {w = 2400, h = 10}))
     table.insert(this.walls, gameDirector:getLibrary("Wall"):new(world.world, 0, 900, {w = 10, h = 1800}))
@@ -37,10 +42,16 @@ function InGameScene:reset()
 end
 
 function InGameScene:update(dt)
+    self.elapsedTime = self.elapsedTime + dt
     self.music:play()
     gameDirector:update(dt)
     self.cameraController:update(dt)
     self.player:update(dt)
+    if self.elapsedTime >= self.waitTime then
+        self.elapsedTime = 0
+        self.waitTime = love.math.random(2, 7)
+        --[[ Here will spawn NPCs --]]
+    end
 end
 
 function InGameScene:draw()
@@ -51,6 +62,7 @@ function InGameScene:draw()
         end
         self.player:draw()
     end)
+    self.hud:draw()
 end
 
 return InGameScene

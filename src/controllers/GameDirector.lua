@@ -3,14 +3,20 @@ local CameraController = require "controllers.CameraController"
 local DataPersistence = require "controllers.DataPersistence"
 
 -- Models
+local HeadUpDisplay = require "models.business.HeadUpDisplay"
 local World = require "models.business.World"
 local Wall = require "models.business.Wall"
 
 -- Entities
 local Player = require "models.entities.Player"
+local NonPlayerCharacter = require "models.entities.NonPlayerCharacter"
+
+-- Util
+local EventQueue = require "util.EventQueue"
 
 -- Game UI
 local ButtonManager = require "util.ui.ButtonManager"
+local ProgressBar = require "util.ui.ProgressBar"
 
 -- Libraries
 local Sanghost = require "libs.Sanghost.Sanghost"
@@ -31,7 +37,8 @@ function GameDirector:new()
         libraries = {
             Sanghost = Sanghost, ButtonManager = ButtonManager, Pixelurite = Pixelurite,
             CameraController = CameraController, DataPersistence = DataPersistence, Player = Player,
-            Wall = Wall
+            Wall = Wall, EventQueue = EventQueue, NonPlayerCharacter = NonPlayerCharacter,
+            HeadUpDisplay = HeadUpDisplay, ProgressBar = ProgressBar
         }
     }
 
