@@ -13,7 +13,7 @@ function Player:new(world, x, y)
             down = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Front", "assets/sprites/Sigmundneyson/", true, nil, 1, 1, true),
             up = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Back", "assets/sprites/Sigmundneyson/", true, nil, 1, 1, true),
             left = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Back", "assets/sprites/Sigmundneyson/", true, nil, 1, 1, true),
-            right = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Back", "assets/sprites/Sigmundneyson/", true, nil, 1, 1, true)
+            right = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Front", "assets/sprites/Sigmundneyson/", true, nil, 1, 1, true)
         },
         currentSprite = "down",
         canMove = false,
@@ -23,7 +23,7 @@ function Player:new(world, x, y)
     }
     this.body:setFixedRotation(true)
     this.fixture = love.physics.newFixture(this.body, this.shape)
-    this.fixture:setRestitution(30)
+    this.fixture:setRestitution(0.3)
     return setmetatable(this, Player)
 end
 
@@ -54,8 +54,18 @@ function Player:update(dt)
         local xForce = 0; local yForce = 0
         if self.orientations[self.currentSprite] == "horizontal" then
             xForce = self.speed * (self.currentSprite == "right" and 2 or -2)
+            if love.keyboard.isDown("up") then
+                yForce = self.speed * -1.5
+            elseif love.keyboard.isDown("down") then
+                yForce = self.speed * 1.5
+            end
         else
             yForce = self.speed * (self.currentSprite == "down" and 2 or -2)
+            if love.keyboard.isDown("left") then
+                xForce = self.speed * -1.5
+            elseif love.keyboard.isDown("right") then
+                xForce = self.speed * 1.5
+            end
         end
         self.body:setLinearVelocity(xForce, yForce)
         self.sprite[self.currentSprite]:update(dt)

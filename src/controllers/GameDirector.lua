@@ -4,6 +4,7 @@ local DataPersistence = require "controllers.DataPersistence"
 
 -- Models
 local World = require "models.business.World"
+local Wall = require "models.business.Wall"
 
 -- Entities
 local Player = require "models.entities.Player"
@@ -29,7 +30,8 @@ function GameDirector:new()
         --Libraries
         libraries = {
             Sanghost = Sanghost, ButtonManager = ButtonManager, Pixelurite = Pixelurite,
-            CameraController = CameraController, DataPersistence = DataPersistence, Player = Player
+            CameraController = CameraController, DataPersistence = DataPersistence, Player = Player,
+            Wall = Wall
         }
     }
 
