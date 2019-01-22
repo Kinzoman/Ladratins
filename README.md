@@ -19,16 +19,16 @@ No final de cada estágio você tem acesso a uma loja, onde você vende as coisa
 
 Gráficos / Sprites: 0%
 
-Sons / Músicas: 10%
+Sons / Músicas: 40%
 
 ## Features
 
-Personagem principal: 10%
+Personagem principal: 100%
 
-Controle do jogo: 20%
+Controle do jogo: 70%
 
-Obstáculos e NPCs: 0%
+Obstáculos e NPCs: 20%
 
 Loja in-game: 0%
 
-Interface: 40%
+Interface: 60%

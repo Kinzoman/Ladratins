@@ -24,6 +24,7 @@ function Player:new(world, x, y)
     this.body:setFixedRotation(true)
     this.fixture = love.physics.newFixture(this.body, this.shape)
     this.fixture:setRestitution(0.3)
+    this.fixture:setUserData("Player")
     return setmetatable(this, Player)
 end
 
