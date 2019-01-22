@@ -8,7 +8,7 @@ function Player:new(world, x, y)
         body = love.physics.newBody(world, x or 0, y or 0, "dynamic"),
         shape = love.physics.newCircleShape(16),
         fixture = nil,
-        speed = 150,
+        speed = 70,
         sprite = {
             down = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Front", "assets/sprites/Sigmundneyson/", true, nil, 1, 1, true),
             up = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Back", "assets/sprites/Sigmundneyson/", true, nil, 1, 1, true),
@@ -17,8 +17,9 @@ function Player:new(world, x, y)
         },
         currentSprite = "down",
         canMove = false,
-        keys = {up = "up", down = "down", left = "left", right = "right"},
-        orientations = {up = "vertical", down = "vertical", right = "horizontal", left = "horizontal"}
+        keys = {up = "up", down = "down", left = "left", right = "right", space = "jump"},
+        orientations = {up = "vertical", down = "vertical", right = "horizontal", left = "horizontal"},
+        elapsedTime = 0
     }
     this.body:setFixedRotation(true)
     this.fixture = love.physics.newFixture(this.body, this.shape)
@@ -48,17 +49,33 @@ function Player:getPosition()
 end
 
 function Player:update(dt)
+    self.elapsedTime = self.elapsedTime + dt
     if self.canMove then
         local xForce = 0; local yForce = 0
         if self.orientations[self.currentSprite] == "horizontal" then
-            xForce = self.speed * (self.currentSprite == "right" and 1 or -1)
+            xForce = self.speed * (self.currentSprite == "right" and 2 or -2)
         else
-            yForce = self.speed * (self.currentSprite == "down" and 1 or -1)
+            yForce = self.speed * (self.currentSprite == "down" and 2 or -2)
         end
         self.body:setLinearVelocity(xForce, yForce)
         self.sprite[self.currentSprite]:update(dt)
     else
-        self.body:setLinearVelocity(0, 0)
+        self.elapsedTime = 0
+        local stop = false
+        local xVelocity = 0; local yVelocity = 0
+        local x, y = self.body:getLinearVelocity()
+        if self.orientations[self.currentSprite] == "horizontal" then
+            xVelocity = self.currentSprite == "right" and -1 or 1
+            if xVelocity < 0 and x < 0 then stop = true end
+            if xVelocity > 0 and x > 0 then stop = true end
+        else
+            yVelocity = self.currentSprite == "down" and -1 or 1
+            if yVelocity < 0 and y < 0 then stop = true end
+            if yVelocity > 0 and y > 0 then stop = true end
+        end
+        if not stop then
+            self.body:applyLinearImpulse(xVelocity, yVelocity)
+        end
     end
 end
 
