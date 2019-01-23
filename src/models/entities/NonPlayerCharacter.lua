@@ -2,8 +2,13 @@ local NonPlayerCharacter = {}
 
 NonPlayerCharacter.__index = NonPlayerCharacter
 
---[[local citzenSprite = love.graphics.newImage()
-local copSprite = love.graphics.newImage()--]]
+local citzenSprite = nil
+local copSprite = nil
+
+local function getSprite()
+    citzenSprite = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Cop_Running_Down", "assets/sprites/Cop/", true, nil, 1, 1, true)
+    copSprite = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Cop_Running_Down", "assets/sprites/Cop/", true, nil, 1, 1, true)
+end
 
 local function copsUpdate(this, dt)
     if not this.state then
@@ -36,6 +41,7 @@ local function saveCitzen(this, fixture)
 end
 
 function NonPlayerCharacter:new(characterType, world, x, y, getPlayerPosition)
+    getSprite()
     local this = {
         characterType = characterType,
         state = true,  --[[ IDLE (0) : FOLLOWING(1) --]]
@@ -43,6 +49,7 @@ function NonPlayerCharacter:new(characterType, world, x, y, getPlayerPosition)
         body = love.physics.newBody(world, x or 0, y or 0, "dynamic"),
         shape = love.physics.newCircleShape(24),
         getPlayerPosition = getPlayerPosition,
+        sprites = characterType == 0 and copSprite or citzenSprite,
         fixture = nil,
         updateFunction = characterType == 0 and copsUpdate or citzenUpdate,
         stopTime = 0,
@@ -101,7 +108,7 @@ function NonPlayerCharacter:update(dt)
 end
 
 function NonPlayerCharacter:draw()
-    love.graphics.circle("fill" , self.body:getX(), self.body:getY(), 24)
+    self.sprites:draw(self.body:getX(), self.body:getY())
 end
 
 return NonPlayerCharacter
