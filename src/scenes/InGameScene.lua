@@ -28,6 +28,10 @@ end
 local function endContact(a, b, col)
 end
 
+local function getPlayerLocation()
+    return instance.player:getPosition()
+end
+
 function InGameScene:new(world)
     local this = {
         world = world,
@@ -45,7 +49,7 @@ function InGameScene:new(world)
     }
     this.world:addCallback("inGame", beginContact, "beginContact"); this.world:changeCallbacks("inGame")
     this.music:setLooping(true)
-    this.cameraController = gameDirector:getLibrary("CameraController"):new(this.player, this.mapSize, 0.33)
+    this.cameraController = gameDirector:getLibrary("CameraController"):new(this.player, this.mapSize, 2)
     sceneDirector:addSubscene("pause", require "scenes.subscenes.PauseGame":new())
     sceneDirector:addSubscene("gameOver", require "scenes.subscenes.GameOver":new())
     --[[Adding walls to game --]]
@@ -110,8 +114,8 @@ function InGameScene:update(dt)
         self.elapsedTime = 0
         self.waitTime = love.math.random(2, 7)
         --[[ Here will spawn NPCs --]]
-        local newNPC = gameDirector:getLibrary("NonPlayerCharacter"):new(love.math.random(1),
-        self.world.world, love.math.random(self.mapSize.w), love.math.random(self.mapSize.h))
+        local newNPC = gameDirector:getLibrary("NonPlayerCharacter"):new(love.math.random(0, 2),
+        self.world.world, love.math.random(self.mapSize.w), love.math.random(self.mapSize.h), getPlayerLocation)
         self.npcs[newNPC:getFixture()] = newNPC
     end
 end

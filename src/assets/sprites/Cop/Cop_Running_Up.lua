@@ -1,254 +1,254 @@
 return {
-	frames = {
-		Sigmundneyson_Front5 = {
-			rotated = false,
-			trimmed = false,
-			sourceSize = {
-				w = 48,
-				h = 48,
-			},
-			frame = {
-				w = 48,
-				x = 96,
-				y = 48,
-				h = 48,
-			},
-			spriteSourceSize = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-		},
-		Sigmundneyson_Front2 = {
-			rotated = false,
-			trimmed = false,
-			sourceSize = {
-				w = 48,
-				h = 48,
-			},
-			frame = {
-				w = 48,
-				x = 96,
-				y = 0,
-				h = 48,
-			},
-			spriteSourceSize = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-		},
-		Sigmundneyson_Front11 = {
-			rotated = false,
-			trimmed = false,
-			sourceSize = {
-				w = 48,
-				h = 48,
-			},
-			frame = {
-				w = 48,
-				x = 96,
-				y = 144,
-				h = 48,
-			},
-			spriteSourceSize = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-		},
-		Sigmundneyson_Front1 = {
-			rotated = false,
-			trimmed = false,
-			sourceSize = {
-				w = 48,
-				h = 48,
-			},
-			frame = {
-				w = 48,
-				x = 48,
-				y = 0,
-				h = 48,
-			},
-			spriteSourceSize = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-		},
-		Sigmundneyson_Front4 = {
-			rotated = false,
-			trimmed = false,
-			sourceSize = {
-				w = 48,
-				h = 48,
-			},
-			frame = {
-				w = 48,
-				x = 48,
-				y = 48,
-				h = 48,
-			},
-			spriteSourceSize = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-		},
-		Sigmundneyson_Front0 = {
-			rotated = false,
-			trimmed = false,
-			sourceSize = {
-				w = 48,
-				h = 48,
-			},
-			frame = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-			spriteSourceSize = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-		},
-		Sigmundneyson_Front3 = {
-			rotated = false,
-			trimmed = false,
-			sourceSize = {
-				w = 48,
-				h = 48,
-			},
-			frame = {
-				w = 48,
-				x = 0,
-				y = 48,
-				h = 48,
-			},
-			spriteSourceSize = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-		},
-		Sigmundneyson_Front9 = {
-			rotated = false,
-			trimmed = false,
-			sourceSize = {
-				w = 48,
-				h = 48,
-			},
-			frame = {
-				w = 48,
-				x = 0,
-				y = 144,
-				h = 48,
-			},
-			spriteSourceSize = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-		},
-		Sigmundneyson_Front8 = {
-			rotated = false,
-			trimmed = false,
-			sourceSize = {
-				w = 48,
-				h = 48,
-			},
-			frame = {
-				w = 48,
-				x = 96,
-				y = 96,
-				h = 48,
-			},
-			spriteSourceSize = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-		},
-		Sigmundneyson_Front10 = {
-			rotated = false,
-			trimmed = false,
-			sourceSize = {
-				w = 48,
-				h = 48,
-			},
-			frame = {
-				w = 48,
-				x = 48,
-				y = 144,
-				h = 48,
-			},
-			spriteSourceSize = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-		},
-		Sigmundneyson_Front7 = {
-			rotated = false,
-			trimmed = false,
-			sourceSize = {
-				w = 48,
-				h = 48,
-			},
-			frame = {
-				w = 48,
-				x = 48,
-				y = 96,
-				h = 48,
-			},
-			spriteSourceSize = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-		},
-		Sigmundneyson_Front6 = {
-			rotated = false,
-			trimmed = false,
-			sourceSize = {
-				w = 48,
-				h = 48,
-			},
-			frame = {
-				w = 48,
-				x = 0,
-				y = 96,
-				h = 48,
-			},
-			spriteSourceSize = {
-				w = 48,
-				x = 0,
-				y = 0,
-				h = 48,
-			},
-		},
-	},
 	meta = {
 		version = "1.0",
-		image = "Sigmundneyson_Front.png",
 		size = {
-			w = 144,
 			h = 192,
+			w = 144,
 		},
-		app = "https://github.com/piskelapp/piskel/",
+		image = "Cop_Running_Up.png",
 		format = "RGBA8888",
+		app = "https://github.com/piskelapp/piskel/",
+	},
+	frames = {
+		Cop_Running_Up5 = {
+			trimmed = false,
+			sourceSize = {
+				h = 48,
+				w = 48,
+			},
+			spriteSourceSize = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+			rotated = false,
+			frame = {
+				x = 96,
+				y = 48,
+				h = 48,
+				w = 48,
+			},
+		},
+		Cop_Running_Up4 = {
+			trimmed = false,
+			sourceSize = {
+				h = 48,
+				w = 48,
+			},
+			spriteSourceSize = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+			rotated = false,
+			frame = {
+				x = 48,
+				y = 48,
+				h = 48,
+				w = 48,
+			},
+		},
+		Cop_Running_Up2 = {
+			trimmed = false,
+			sourceSize = {
+				h = 48,
+				w = 48,
+			},
+			spriteSourceSize = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+			rotated = false,
+			frame = {
+				x = 96,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+		},
+		Cop_Running_Up11 = {
+			trimmed = false,
+			sourceSize = {
+				h = 48,
+				w = 48,
+			},
+			spriteSourceSize = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+			rotated = false,
+			frame = {
+				x = 96,
+				y = 144,
+				h = 48,
+				w = 48,
+			},
+		},
+		Cop_Running_Up0 = {
+			trimmed = false,
+			sourceSize = {
+				h = 48,
+				w = 48,
+			},
+			spriteSourceSize = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+			rotated = false,
+			frame = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+		},
+		Cop_Running_Up1 = {
+			trimmed = false,
+			sourceSize = {
+				h = 48,
+				w = 48,
+			},
+			spriteSourceSize = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+			rotated = false,
+			frame = {
+				x = 48,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+		},
+		Cop_Running_Up9 = {
+			trimmed = false,
+			sourceSize = {
+				h = 48,
+				w = 48,
+			},
+			spriteSourceSize = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+			rotated = false,
+			frame = {
+				x = 0,
+				y = 144,
+				h = 48,
+				w = 48,
+			},
+		},
+		Cop_Running_Up3 = {
+			trimmed = false,
+			sourceSize = {
+				h = 48,
+				w = 48,
+			},
+			spriteSourceSize = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+			rotated = false,
+			frame = {
+				x = 0,
+				y = 48,
+				h = 48,
+				w = 48,
+			},
+		},
+		Cop_Running_Up10 = {
+			trimmed = false,
+			sourceSize = {
+				h = 48,
+				w = 48,
+			},
+			spriteSourceSize = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+			rotated = false,
+			frame = {
+				x = 48,
+				y = 144,
+				h = 48,
+				w = 48,
+			},
+		},
+		Cop_Running_Up6 = {
+			trimmed = false,
+			sourceSize = {
+				h = 48,
+				w = 48,
+			},
+			spriteSourceSize = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+			rotated = false,
+			frame = {
+				x = 0,
+				y = 96,
+				h = 48,
+				w = 48,
+			},
+		},
+		Cop_Running_Up7 = {
+			trimmed = false,
+			sourceSize = {
+				h = 48,
+				w = 48,
+			},
+			spriteSourceSize = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+			rotated = false,
+			frame = {
+				x = 48,
+				y = 96,
+				h = 48,
+				w = 48,
+			},
+		},
+		Cop_Running_Up8 = {
+			trimmed = false,
+			sourceSize = {
+				h = 48,
+				w = 48,
+			},
+			spriteSourceSize = {
+				x = 0,
+				y = 0,
+				h = 48,
+				w = 48,
+			},
+			rotated = false,
+			frame = {
+				x = 96,
+				y = 96,
+				h = 48,
+				w = 48,
+			},
+		},
 	},
 }

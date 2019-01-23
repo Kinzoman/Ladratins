@@ -13,6 +13,7 @@ function love.load()
     --Adding Scenes to SceneDirector
     sceneDirector:addScene("mainMenu", require "scenes.MainMenuScene":new())
     sceneDirector:addScene("credits", require "scenes.CreditsScene":new())
+    sceneDirector:addScene("intro", require "scenes.IntroScene":new())
     sceneDirector:addScene("inGame", require "scenes.InGameScene":getInstance(gameDirector:getWorld()))
 end
 

@@ -12,8 +12,8 @@ function Player:new(world, x, y)
         sprite = {
             down = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Front", "assets/sprites/Sigmundneyson/", true, nil, 1, 1, true),
             up = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Back", "assets/sprites/Sigmundneyson/", true, nil, 1, 1, true),
-            left = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Back", "assets/sprites/Sigmundneyson/", true, nil, 1, 1, true),
-            right = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Front", "assets/sprites/Sigmundneyson/", true, nil, 1, 1, true)
+            left = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Side", "assets/sprites/Sigmundneyson/", true, nil, -1, 1, true),
+            right = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("Sigmundneyson_Side", "assets/sprites/Sigmundneyson/", true, nil, 1, 1, true)
         },
         currentSprite = "down",
         canMove = false,
